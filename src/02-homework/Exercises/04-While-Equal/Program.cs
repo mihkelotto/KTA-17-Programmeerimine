@@ -13,6 +13,10 @@ namespace _04_While_Equal
             Console.WriteLine("Ma valin välja ühe suvalise numbri vahemikus [1 – 100]. Proovi see ära arvata");
             Console.WriteLine();
 
+            Random rnd = new Random();
+
+            int computerNumber = rnd.Next(1, 101);
+
             int equal = 0;
 
             while (equal == 0) {
@@ -21,10 +25,6 @@ namespace _04_While_Equal
 
                 string input = Console.ReadLine();
                 Console.WriteLine();
-
-                Random rnd = new Random();
-
-                int computerNumber = rnd.Next(1, 101);
 
                 int userNumber = int.Parse(input);
 

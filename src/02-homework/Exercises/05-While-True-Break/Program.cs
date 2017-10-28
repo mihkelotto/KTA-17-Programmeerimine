@@ -13,15 +13,15 @@ namespace _05_While_True_Break
             Console.WriteLine("Ma valin välja ühe suvalise numbri vahemikus [1 – 100]. Proovi see ära arvata");
             Console.WriteLine();
 
+            Random rnd = new Random();
+
+            int computerNumber = rnd.Next(1, 101);
+
             while (true) {
 
                 Console.Write("Sisesta number: ");
 
                 string input = Console.ReadLine();
-
-                Random rnd = new Random();
-
-                int computerNumber = rnd.Next(1, 101);
 
                 int userNumber = int.Parse(input);
 
