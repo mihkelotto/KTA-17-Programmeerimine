@@ -10,7 +10,7 @@ namespace _03_Third
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Third");
+            Console.WriteLine("Third test");
         }
     }
 }
