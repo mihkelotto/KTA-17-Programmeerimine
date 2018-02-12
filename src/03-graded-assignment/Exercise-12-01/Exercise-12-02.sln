@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordMixer", "WordMixer\WordMixer.csproj", "{CF1CA00D-5842-4019-BF37-FAD991FFF60F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP", "OOP\OOP.csproj", "{799CEB57-983B-4928-8FA1-A90966400C15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{CF1CA00D-5842-4019-BF37-FAD991FFF60F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF1CA00D-5842-4019-BF37-FAD991FFF60F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF1CA00D-5842-4019-BF37-FAD991FFF60F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{799CEB57-983B-4928-8FA1-A90966400C15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{799CEB57-983B-4928-8FA1-A90966400C15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{799CEB57-983B-4928-8FA1-A90966400C15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{799CEB57-983B-4928-8FA1-A90966400C15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
