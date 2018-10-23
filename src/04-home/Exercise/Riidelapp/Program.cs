@@ -8,47 +8,91 @@ namespace Riidelapp
 {
     class Riidelapp
     {
-        private int pikkus;
-        private int laius;
-        private int toon;
+        private double pikkus;
+        private double laius;
+        private string toon;
 
 
-        public Riidelapp(int pikkus2, int laius2, int toon2)
+        public Riidelapp(double upikkus, double ulaius, string utoon)
         {
-            pikkus = pikkus2;
-            laius = laius2;
-            toon = toon2;
+            pikkus = upikkus;
+            laius = ulaius;
+            toon = utoon;
         }
 
-        public int GetPikkus()
-        {
-            return pikkus;
-        }
-        public int GetLaius()
+        public double GetPikkus()
         {
             return pikkus;
         }
+        public double GetLaius()
+        {
+            return laius;
+        }
 
-        public int GetToon()
+        public string GetToon()
         {
             return toon;
         }
 
 
 
-        public int Poolita()
+        public Riidelapp Poolita()
         {
-            pikkus = pikkus / 2;
-            return pikkus;
-        }
-        class Proov
-        {
-            static void Main(string[] args)
+            if(pikkus > laius || pikkus == laius)
             {
+                pikkus = pikkus / 2;
+            }
 
+            else
+            {
+                laius = laius / 2;
+            }
+
+            return new Riidelapp(pikkus, laius, toon);
+        }
+
+        public Riidelapp PoolitaProtsent(double protsent)
+        {
+            if (pikkus > laius || pikkus == laius)
+            {
+                pikkus = pikkus * (protsent * 0.01);
+            }
+
+            else
+            {
+                laius = laius * (protsent * 0.01);
+            }
+
+            return new Riidelapp(pikkus, laius, toon);
+        }
+
+    }
+
+    class RiidelappProov
+    {
+        static void Main(string[] args)
+        {
+            Riidelapp rl1 = new Riidelapp(6, 8, "valge");
+            Console.WriteLine(rl1.GetPikkus());
+            Console.WriteLine(rl1.GetLaius());
+            Console.WriteLine(rl1.GetToon());
+            Console.WriteLine();
+            double pindala = rl1.GetPikkus() * rl1.GetLaius();
+            Console.WriteLine("Pindala: " + pindala);
+            Console.WriteLine();
+            Riidelapp rl2 = rl1.Poolita();
+            Console.WriteLine(rl2.GetPikkus());
+            Console.WriteLine(rl2.GetLaius());
+            Console.WriteLine(rl2.GetToon());
+            Console.WriteLine();
+            Riidelapp rl3 = new Riidelapp(14, 10, "must");
+            double protsent = 25;
+            Riidelapp rl4 = rl3.PoolitaProtsent(protsent);
+            Console.WriteLine(rl4.GetPikkus());
+            Console.WriteLine(rl4.GetLaius());
+            Console.WriteLine(rl4.GetToon());
+            Console.ReadKey();
             }
         }
 
-
-    }
 }
